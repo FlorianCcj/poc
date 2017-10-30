@@ -1,5 +1,19 @@
-<StackLayout class="p-10">
-	<Label test="Detailed info" class="h1"></Label>
-	<Label test="Even more awesome video workshops and info." class="h3" textWrap="true"></Label>
-	<Button nsRouterLink="/detail" text="Read More" class="m-10 btn btn-primary"></Button>
+<ActionBar title="Detail" icon="" class="action-bar">
+	<NavigationButton text="Back" (tap)="goBack()" android.systemIcon="ic_menu_back"></NavigationButton>
+</ActionBar>
+<StackLayout>
+	<GridLayout rows="auto" columns="75,*,75" class="action-bar p-10">
+		<Button text="Close" (tap)="close()" row="0" col="0" class="action-item"></Button>
+		<Label text="Detail" textWrap="true" row="0" col="1" class="action-bar-title text-center"></Label>
+	</GridLayout>
+	<!--<StackLayout class="p-10">
+		<Label test="Detailed info" class="h1"></Label>
+		<Label test="Even more awesome video workshops and info." class="h3" textWrap="true"></Label>
+		<Button nsRouterLink="/detail" text="Read More" class="m-10 btn btn-primary"></Button>
+	</StackLayout>-->
+	<ListView [items]="items$ | async" (itemTap)="onItemTap($event)" class="list-group" ios:height="100%" android:height="75%">
+		<template let-item="item" let-odd="odd" let-even="even">
+			<Label [text]="item.title" class="list-group-item"></Label>
+		</template>
+	</ListView>
 </StackLayout>

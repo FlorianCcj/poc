@@ -1,0 +1,14 @@
+@import 'nativescript-theme-core/scss/dark';
+
+$primary = #fff;
+$accent: #384030;
+
+// ActionBar
+$ab-background: #A32C28;
+$ab-color: $primary;
+$secondary: #7B8055;
+$btn-color: $accent;
+$btn-color-secondary: darken($accent, 5%);
+
+// Theme's main ruleset
+@import 'nativescript-theme-core/scss/index';

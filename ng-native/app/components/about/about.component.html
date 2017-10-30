@@ -1,4 +1,7 @@
+<ActionBar title="About" icon="" class="action-bar"></ActionBar>
 <StackLayout>
 	<Label text="About Egghead.io" class="h1"></Label>
 	<Label text="The most amazing Javascript tutorials and video workshops." class="h3" textWrap="true"></Label>
+	<Button nsRouterLink="/detail" text="Read More" class="m-10 btn btn-primary"></Button>
+	<Button (tap)="openModal()" text="Read More on modal" class="m-10 btn btn-primary"></Button>
 </StackLayout>
